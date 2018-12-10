@@ -21,7 +21,7 @@
     <div class="container">
       <a class="navbar-brand" href="index.html">conduit</a>
       <input class="form-control form-control-sm search-input" type="text" placeholder="Keyword">
-      <button class="btn btn-sm btn-primary">
+      <button class="btn btn-sm btn-primary" ng-click = "show()">
         <i class="ion-search"></i>
       </button>
     </div>
@@ -31,7 +31,7 @@
 
     <div class="banner">
       <div class="container">
-        <h1 class="logo-font">{{title}}</h1>
+        <h1 class="logo-font" ng-show = "showTitle">{{title}}</h1>
         <p>{{subtitle}}</p>
       </div>
     </div>
