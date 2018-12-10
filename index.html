@@ -20,10 +20,10 @@
   <nav class="navbar navbar-light">
     <div class="container">
       <a class="navbar-brand" href="index.html">conduit</a>
-      <input class="form-control form-control-sm search-input" type="text" placeholder="Keyword">
+      <input class="form-control form-control-sm search-input" type="text" placeholder="Keyword" ng-model = "keyword">
       <button class="btn btn-sm btn-primary" ng-click = "show()">
         <i class="ion-search"></i>
-      </button>
+      </button>{{keyword}}
     </div>
   </nav>
 
