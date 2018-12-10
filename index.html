@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
 
 <head>
   <meta charset="utf-8">
@@ -15,7 +15,7 @@
   </style>
 </head>
 
-<body>
+<body ng-controller="appController">
 
   <nav class="navbar navbar-light">
     <div class="container">
@@ -31,8 +31,8 @@
 
     <div class="banner">
       <div class="container">
-        <h1 class="logo-font">conduit</h1>
-        <p>A place to share your knowledge.</p>
+        <h1 class="logo-font">{{title}}</h1>
+        <p>{{subtitle}}</p>
       </div>
     </div>
 
@@ -63,10 +63,14 @@
             </div>
             <a href="post.html" class="preview-link">
               <h1>How to build webapps that scale</h1>
-              <p>In my demo, the holy grail layout is nested inside a document, so there's no body or main tags like shown above.
-                Regardless, we're interested in the class names and the appearance of sections in the markup as opposed to
-                the actual elements themselves. In particular, take note of the modifier classes used on the two sidebars,
-                and the trivial order in which they appear in the markup. Let's break this down to paint a clear picture
+              <p>In my demo, the holy grail layout is nested inside a document, so there's no body or main tags like
+                shown above.
+                Regardless, we're interested in the class names and the appearance of sections in the markup as opposed
+                to
+                the actual elements themselves. In particular, take note of the modifier classes used on the two
+                sidebars,
+                and the trivial order in which they appear in the markup. Let's break this down to paint a clear
+                picture
                 of what's happening...</p>
               <span>Read more...</span>
             </a>
@@ -87,10 +91,14 @@
             </div>
             <a href="post.html" class="preview-link">
               <h1>The song you won't ever stop singing. No matter how hard you try.</h1>
-              <p>In my demo, the holy grail layout is nested inside a document, so there's no body or main tags like shown above.
-                Regardless, we're interested in the class names and the appearance of sections in the markup as opposed to
-                the actual elements themselves. In particular, take note of the modifier classes used on the two sidebars,
-                and the trivial order in which they appear in the markup. Let's break this down to paint a clear picture
+              <p>In my demo, the holy grail layout is nested inside a document, so there's no body or main tags like
+                shown above.
+                Regardless, we're interested in the class names and the appearance of sections in the markup as opposed
+                to
+                the actual elements themselves. In particular, take note of the modifier classes used on the two
+                sidebars,
+                and the trivial order in which they appear in the markup. Let's break this down to paint a clear
+                picture
                 of what's happening...</p>
               <span>Read more...</span>
             </a>
@@ -133,4 +141,7 @@
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/bootstrap/bootstrap.min.js"></script>
   <script src="assets/js/angular.min.js"></script>
+  <script src="app.js"></script>
 </body>
+
+</html>
