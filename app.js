@@ -83,4 +83,28 @@
         }
 
     });
+
+    app.filter('itemFilter', function () {
+        return function (input) {
+            switch (input) {
+                case "01":
+                    return "01-公保";
+                    break;
+                case "02":
+                    return "02-勞保";
+                    break;
+                case "03":
+                    return "03-勞工退休金";
+                    break;
+                case "04":
+                    return "04-健保";
+                    break;
+                case "05":
+                    return "05-退撫基金";
+                    break;
+                default:
+                    return "全部";
+            }
+        };
+    });
 })();
