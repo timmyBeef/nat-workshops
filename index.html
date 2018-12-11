@@ -20,8 +20,8 @@
   <nav class="navbar navbar-light">
     <div class="container">
       <a class="navbar-brand" href="index.html">conduit</a>
-      <input class="form-control form-control-sm search-input" type="text" placeholder="Keyword" ng-model = "keyword">
-      <button class="btn btn-sm btn-primary" ng-click = "show()">
+      <input class="form-control form-control-sm search-input" type="text" placeholder="Keyword" ng-model = "keyword.title">
+      <button class="btn btn-sm btn-primary" ng-click = "search()">
         <i class="ion-search"></i>
       </button>{{keyword}}
     </div>
@@ -31,7 +31,7 @@
 
     <div class="banner">
       <div class="container">
-        <h1 class="logo-font" ng-show = "showTitle">{{title}}</h1>
+        <h1 class="logo-font">{{title}}</h1>
         <p>{{subtitle}}</p>
       </div>
     </div>
@@ -48,7 +48,7 @@
             </ul>
           </div>
 
-          <div class="post-preview" ng-repeat="article in list track by $index" ng-show="$even">
+          <div class="post-preview" ng-repeat="article in list | filter:keyword">
             <div class="post-meta">
               <a href="profile.html">
                 <img ng-src={{article.author.image}}>
