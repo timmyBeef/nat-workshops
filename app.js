@@ -2,14 +2,7 @@
     var app = angular.module("app", []);
 
     app.controller('appController', function ($scope, $filter) {
-        $scope.title = 'NTA';
-        $scope.subtitle = 'National Treasury Administration, Ministry of Finance';
-        $scope.showTitle = true;
-
-        $scope.search = function () {
-        }
-
-        $scope.list = [
+        var articles = [
             {
                 title: "How to build webapps that scale",
                 slug: "zp7yqc",
@@ -79,5 +72,15 @@
                 favoritesCount: 5
             }
         ];
+        $scope.list = angular.copy(articles);
+
+        $scope.title = 'NTA';
+        $scope.subtitle = 'National Treasury Administration, Ministry of Finance';
+        $scope.showTitle = true;
+
+        $scope.search = function () {
+            $scope.list = $filter('filter')(articles, $scope.keyword.title);
+        }
+
     });
 })();

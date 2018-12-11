@@ -48,7 +48,7 @@
             </ul>
           </div>
 
-          <div class="post-preview" ng-repeat="article in list | filter:keyword">
+          <div class="post-preview" ng-repeat="article in list track by $index">
             <div class="post-meta">
               <a href="profile.html">
                 <img ng-src={{article.author.image}}>
