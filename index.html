@@ -48,7 +48,7 @@
             </ul>
           </div>
 
-          <div class="post-preview" ng-repeat="article in list track by $index">
+          <div class="post-preview" ng-repeat="article in list track by $index" ng-show="$even">
             <div class="post-meta">
               <a href="profile.html">
                 <img ng-src={{article.author.image}}>
